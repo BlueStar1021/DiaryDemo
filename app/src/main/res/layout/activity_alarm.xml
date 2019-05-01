@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_alarm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.diarydemo.AlarmActivity">
+
+    <TimePicker
+        android:id="@+id/activity_alarm_picker"
+        android:paddingBottom="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"/>
+
+    <Switch
+        android:id="@+id/activity_alarm_switch"
+        android:layout_below="@id/activity_alarm_picker"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="0dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/activity_alarm_switch"
+        android:layout_alignTop="@id/activity_alarm_switch"
+        android:text="禁用"
+        android:textColor="#990000"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/activity_alarm_switch"
+        android:layout_alignTop="@id/activity_alarm_switch"
+        android:text="启用"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_alarm_switch"
+        android:layout_centerHorizontal="true"
+        android:text="启用后将在每天的同一时刻提醒您写日记"
+        android:textStyle="italic"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15dp"/>
+
+    <Button
+        android:id="@+id/activity_alarm_btnok"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="修改日记"
+        android:textSize="20dp"
+        android:background="#00AAFF"/>
+
+</RelativeLayout>

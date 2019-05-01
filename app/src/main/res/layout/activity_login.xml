@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.diarydemo.LoginActivity"
+    android:background="@drawable/bg_login"
+    android:layout_margin="0dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/activity_login_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="请输入日记本的密码"
+            android:textSize="30dp"
+            android:textColor="@color/loginTextColor" />
+
+        <LinearLayout
+            android:id="@+id/activity_login_inputline"
+            android:layout_below="@id/activity_login_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <EditText
+                android:id="@+id/activity_login_password"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="#FFFFFF"
+                android:maxLines="1"
+                android:textSize="20dp"
+                android:inputType="textPassword"/>
+
+
+            <Button
+                android:id="@+id/activity_login_btnok"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:text="打开日记"
+                android:background="@color/loginTextColor"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/activity_login_btnchange"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:textColor="@color/loginTextColor"
+        android:text="修改密码请点击这里"
+        android:autoLink="all" />
+
+    <TextView
+        android:id="@+id/activity_login_passwordhint"
+        android:layout_above="@id/activity_login_btnchange"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:padding="5dp"
+        android:textColor="@color/loginTextColor"
+        android:textSize="15dp"
+        android:text="如果您第一次使用日记管家，或者从未更改过密码，初始密码为 000000 ，如需修改密码，请点击下方文字。"
+        android:background="@drawable/bg_hint"/>
+
+</RelativeLayout>

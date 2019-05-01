@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_read"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.diarydemo.ReadActivity"
+    android:background="@drawable/bg_read">
+
+
+    <!-- 左侧列表部分 -->
+    <RelativeLayout
+        android:id="@+id/activity_read_listpanel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="7"
+        android:layout_marginLeft="50dp">
+
+        <!-- 左侧列表的标题 -->
+        <TextView
+            android:id="@+id/activity_read_listtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="我的日记"
+            android:textColor="#990000"
+            android:textSize="25dp"/>
+
+        <!-- 列表 -->
+        <ListView
+            android:id="@+id/activity_read_list"
+            android:layout_below="@id/activity_read_listtitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ></ListView>
+
+
+    </RelativeLayout>
+
+
+    <!-- 右侧选择按钮部分 -->
+    <LinearLayout
+        android:id="@+id/activity_read_selectbtn"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <!-- 从上至下一共有3个Button -->
+        <Button
+            android:id="@+id/activity_read_selectbtn_date"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#008800"
+            android:text="按日期查找"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:alpha="0.5"/>
+
+        <Button
+            android:id="@+id/activity_read_selectbtn_mood"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#008800"
+            android:text="按心情查找"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:alpha="0.5"/>
+
+        <Button
+            android:id="@+id/activity_read_selectbtn_recent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#008800"
+            android:text="最近的日记"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:alpha="0.5" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

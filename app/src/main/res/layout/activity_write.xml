@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_write"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.diarydemo.WriteActivity"
+    android:background="@drawable/bg_write">
+
+    <LinearLayout
+        android:id="@+id/activity_write_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/activity_write_year"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#008800"
+            android:gravity="center"
+            android:text="year"
+            android:focusable="false"/>
+
+        <EditText
+            android:id="@+id/activity_write_month"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#008800"
+            android:gravity="center"
+            android:text="month"
+            android:focusable="false"/>
+
+        <EditText
+            android:id="@+id/activity_write_day"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#008800"
+            android:gravity="center"
+            android:text="day"
+            android:focusable="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_write_title"
+        android:layout_below="@id/activity_write_topbar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/activity_write_title_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="摘要"
+            android:textColor="@color/colorPrimary"/>
+
+        <EditText
+            android:id="@+id/activity_write_title_content"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:minLines="1"
+            android:maxLines="1"
+            android:background="#FFFFFF"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/activity_write_mood"
+        android:layout_below="@id/activity_write_title"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/activity_write_mood_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="心情"
+            android:textColor="@color/colorPrimary"/>
+
+        <RadioGroup
+            android:id="@+id/activity_write_moodgroup"
+            android:layout_toRightOf="@id/activity_write_mood_label"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/activity_write_mood_happy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="开心"
+                android:textSize="10dp"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/activity_write_mood_angry"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:text="愤怒"
+                android:textSize="10dp"/>
+
+            <RadioButton
+                android:id="@+id/activity_write_mood_sad"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:text="悲伤"
+                android:textSize="10dp"/>
+
+            <RadioButton
+                android:id="@+id/activity_write_mood_scared"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:text="惊恐"
+                android:textSize="10dp"/>
+
+            <RadioButton
+                android:id="@+id/activity_write_mood_anxious"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:text="忧愁"
+                android:textSize="10dp"/>
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/activity_write_save"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="保存日记"/>
+
+    <LinearLayout
+        android:id="@+id/activity_write_detail"
+        android:layout_below="@id/activity_write_mood"
+        android:layout_above="@id/activity_write_save"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/activity_write_detail_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="内容"
+            android:textColor="@color/colorPrimary"/>
+
+        <EditText
+            android:id="@+id/activity_write_detail_content"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:background="#FFFFFF"
+            android:gravity="left|top"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

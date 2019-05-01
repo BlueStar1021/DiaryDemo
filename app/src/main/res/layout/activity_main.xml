@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:tileMode="repeat"
+    tools:context="com.example.diarydemo.MainActivity">
+
+    <TextView
+        android:id="@+id/activity_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:text="日记管家"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:background="#00AA00"/>
+
+    <RelativeLayout
+        android:id="@+id/activity_main_bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@drawable/bottombar">
+
+        <ImageView
+            android:id="@+id/activity_main_setting"
+            android:layout_centerHorizontal="true"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/bgcolor_icon"/>
+
+        <ImageView
+            android:id="@+id/activity_main_alarm"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/alarm_icon"/>
+
+        <ImageView
+            android:id="@+id/activity_main_music"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/music_icon"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_main_title"
+        android:layout_above="@id/activity_main_bottombar"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:id="@+id/activity_main_writeblock"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="50dp"
+            android:background="@drawable/bg_mountain">
+
+            <TextView
+                android:id="@+id/activity_main_write"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:text="写日记"
+                android:textColor="#990000"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_alignLeft="@id/activity_main_write"
+                android:text="记你所想记的一切"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_main_readblock"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:paddingRight="50dp"
+            android:background="@drawable/bg_windmill">
+
+            <TextView
+                android:id="@+id/activity_main_read"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:text="看日记"
+                android:textColor="#990000"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_alignRight="@id/activity_main_read"
+                android:text="回忆你最难忘的时刻"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_main_recentblock"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="50dp"
+            android:background="@drawable/bg_goldenfish">
+
+            <TextView
+                android:id="@+id/activity_main_recent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:text="最近的我"
+                android:textColor="#990000"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_alignLeft="@id/activity_main_write"
+                android:text="最近在想些什么？看这里"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
